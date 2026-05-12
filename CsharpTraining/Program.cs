@@ -121,28 +121,6 @@
                         break;
                     case 0:
                         Console.WriteLine("Setup complete. Launching Main Menu...");
-                        Console.WriteLine
-                            ($"""
-
-                                --- Account Profile ---
-                                Account Number                       : {accountNumber}
-                                Holder Name                          : {holderName}
-                                Balance                              : {avgBalance}
-                                Account Active                       : {isActive}
-                                Account Type                         : {accountType}
-                                --- Customer Profile ---
-                                Employed                             : {isEmployed}
-                                Monthly Salary                       : {salary}
-                                Credit Score                         : {creditScore}
-                                Age                                  : {age}
-
-                                --- Transaction Data ---
-                                Last Deposit Amount                 : {deposit}
-                                Last Withdrawal                     : {withdrawl}
-                                Annual Interest Rate                : {annualRate}
-                                Avg Monthly Balance                 : {avgBalance}
-
-                             """);
                         mainMenu();
                         break;
                     default:

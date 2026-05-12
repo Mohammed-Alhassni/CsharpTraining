@@ -153,7 +153,47 @@
 
                     """);
 
+
+                int moduleOption = 1;
+                while (moduleOption != 0)
+                {
+                    Console.Write("Select: ");
+                    moduleOption = Convert.ToInt32(Console.ReadLine());
+
+                    switch (moduleOption)
+                    {
+                        case 1:
+                            break;
+                        case 2:
+                            Console.Write("Account Management");
+                            break;
+                        case 3:
+                            Console.Write("Loan Services");
+                            break;
+                        case 4:
+                            Console.Write("Currency Exchange");
+                            break;
+                        case 5:
+                            Console.Write("Credit Card Portal");
+                            break;
+                        case 6:
+                            Console.Write("Branch Services");
+                            break;
+                        case 7:
+                            Console.Write("Reports & Admin");
+                            break;
+                        case 0:
+                            mainMenu();
+                            break;
+                        default:
+                            Console.WriteLine("Invalid option. Please choose 1–8 or 0 to Exit.");
+                            break;
+                    }
+                }
             }
+
+
+            
         }
     }
 }

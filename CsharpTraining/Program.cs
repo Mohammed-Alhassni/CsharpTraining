@@ -119,6 +119,7 @@
                         Console.WriteLine("Average Balance set to: " + avgBalance);
                         break;
                     default:
+                    Console.WriteLine("Invalid option. Please choose 1–13 or 0 to finish.");
                         break;
                 }
             }

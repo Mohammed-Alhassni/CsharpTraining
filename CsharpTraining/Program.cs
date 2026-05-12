@@ -163,6 +163,7 @@
                     switch (moduleOption)
                     {
                         case 1:
+                            atmServices();
                             break;
                         case 2:
                             Console.Write("Account Management");
@@ -192,7 +193,10 @@
                 }
             }
 
+            void atmServices()
+            {
 
+            }
             
         }
     }

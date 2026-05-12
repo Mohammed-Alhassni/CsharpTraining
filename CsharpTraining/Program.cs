@@ -44,6 +44,7 @@
                 """);
 
             int option = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Select option: " +option);
 
         }
     }

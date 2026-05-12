@@ -184,7 +184,6 @@
                             break;
                         case 0:
                             break;
-                            break;
                         default:
                             Console.WriteLine("Invalid option. Please choose 1–8 or 0 to Exit.");
                             break;

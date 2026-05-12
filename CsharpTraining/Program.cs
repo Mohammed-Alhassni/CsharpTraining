@@ -148,7 +148,6 @@
                         5) Credit Card Portal
                         6) Branch Services 
                         7) Reports & Admin 
-                        8) [BONUS] Full Terminal
                         0) Exit
 
                     """);

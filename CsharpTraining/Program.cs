@@ -166,22 +166,22 @@
                             atmServices();
                             break;
                         case 2:
-                            Console.Write("Account Management");
+                            Console.WriteLine("Account Management");
                             break;
                         case 3:
-                            Console.Write("Loan Services");
+                            Console.WriteLine("Loan Services");
                             break;
                         case 4:
-                            Console.Write("Currency Exchange");
+                            Console.WriteLine("Currency Exchange");
                             break;
                         case 5:
-                            Console.Write("Credit Card Portal");
+                            Console.WriteLine("Credit Card Portal");
                             break;
                         case 6:
-                            Console.Write("Branch Services");
+                            Console.WriteLine("Branch Services");
                             break;
                         case 7:
-                            Console.Write("Reports & Admin");
+                            Console.WriteLine("Reports & Admin");
                             break;
                         case 0:
                             mainMenu();

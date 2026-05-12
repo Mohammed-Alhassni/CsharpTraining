@@ -80,7 +80,7 @@
                         break;
                     case 6:
                         Console.Write("Are you Employed? [enter 1=yes / 0=no]");
-                        isEmployed = bool.Parse(Console.ReadLine());
+                        isEmployed = Convert.ToBoolean(int.Parse(Console.ReadLine()));
                         Console.WriteLine("Employment set to: " + isEmployed);
                         break;
                     case 7:

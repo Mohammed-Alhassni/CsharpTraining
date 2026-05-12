@@ -70,17 +70,17 @@
                         Console.WriteLine("Balance set to: " + balance);
                         break;
                     case 4:
-                        Console.Write("Is Account Active? [enter 1=yes / 0=no]");
+                        Console.Write("Is Account Active [enter 1=yes / 0=no]: ");
                         isActive = Convert.ToBoolean(int.Parse(Console.ReadLine()));
                         Console.WriteLine("Account is set to:" + isActive);
                         break;
                     case 5:
-                        Console.Write("Enter Account type: [enter S / C / F]");
+                        Console.Write("Enter Account type [enter S / C / F]: ");
                         accountType = char.Parse(Console.ReadLine());
                         Console.WriteLine("Account Type set to: " + accountType);
                         break;
                     case 6:
-                        Console.Write("Are you Employed? [enter 1=yes / 0=no]");
+                        Console.Write("Are you Employed [enter 1=yes / 0=no]: ");
                         isEmployed = Convert.ToBoolean(int.Parse(Console.ReadLine()));
                         Console.WriteLine("Employment set to: " + isEmployed);
                         break;
@@ -110,7 +110,7 @@
                         Console.WriteLine("Withdrawl set to: " + withdrawl);
                         break;
                     case 12:
-                        Console.Write("Enter Annual Rate: [e.g. 0.035 = 3.5%]");
+                        Console.Write("Enter Annual Rate [e.g. 0.035 = 3.5%]: ");
                         annualRate = double.Parse(Console.ReadLine());
                         Console.WriteLine("Annual Rate set to: " + annualRate);
                         break;
@@ -120,7 +120,30 @@
                         Console.WriteLine("Average Balance set to: " + avgBalance);
                         break;
                     case 0:
-                        Console.WriteLine("Setup complete. Launching Main Menu... \n");
+                        Console.WriteLine("Setup complete. Launching Main Menu...");
+                        Console.WriteLine
+                            ($"""
+
+                                --- Account Profile ---
+                                Account Number                       : {accountNumber}
+                                Holder Name                          : {holderName}
+                                Balance                              : {avgBalance}
+                                Account Active                       : {isActive}
+                                Account Type                         : {accountType}
+
+                                --- Customer Profile ---
+                                Employed                             : {isEmployed}
+                                Monthly Salary                       : {salary}
+                                Credit Score                         : {creditScore}
+                                Age                                  : {age}
+
+                                --- Transaction Data ---
+                                Last Deposit Amount                 : {deposit}
+                                Last Withdrawal                     : {withdrawl}
+                                Annual Interest Rate                : {annualRate}
+                                Avg Monthly Balance                 : {avgBalance}
+
+                             """);
                         mainMenu();
                         break;
                     default:

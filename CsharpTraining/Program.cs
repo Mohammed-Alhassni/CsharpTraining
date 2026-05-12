@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-           // Shared varibles
+            // Shared varibles
             int accountNumber = 0;
             string holderName = " ";
             double balance = 0;
@@ -21,33 +21,33 @@
 
             Console.WriteLine
                 ($"""
-                === SYSTEM SETUP — Enter Account & Customer Data ===
+                    === SYSTEM SETUP — Enter Account & Customer Data ===
 
-                --- Account Profile ---
+                    --- Account Profile ---
                     1) Account Number                       current: {accountNumber}
                     2) Holder Name                          current: {holderName}
                     3) Balance                              current: {avgBalance}
                     4) Account Active? [enter 1=yes / 0=no] current: {isActive}
                     5) Account Type [enter S / C / F]       current: {accountType}
 
-                --- Customer Profile ---
+                    --- Customer Profile ---
                     6) Employed? [enter 1=yes / 0=no]       current: {isEmployed}
                     7) Monthly Salary                       current: {salary}
                     8) Credit Score                         current: {creditScore}
                     9) Age                                  current: {age}
 
-                --- Transaction Data ---
+                    --- Transaction Data ---
                     10) Last Deposit Amount                 current: {deposit}
                     11) Last Withdrawal                     current: {withdrawl}
                     12) Annual Interest Rate [e.g. 0.035]   current: {annualRate}
                     13) Avg Monthly Balance                 current: {avgBalance}
 
                     0) Setup complete — launch Main Menu
-                """);
+                 """);
 
             int option = 1;
 
-            while (option != 0) 
+            while (option != 0)
             {
                 Console.Write("Select option: ");
                 option = Convert.ToInt32(Console.ReadLine());
@@ -124,30 +124,30 @@
                         mainMenu();
                         break;
                     default:
-                    Console.WriteLine("Invalid option. Please choose 1–13 or 0 to finish.");
+                        Console.WriteLine("Invalid option. Please choose 1–13 or 0 to finish.");
                         break;
                 }
             }
-            
+
             void mainMenu()
             {
                 Console.WriteLine($"""
 
                         === NATIONAL BANK OF OMAN ===
-                    
+
                         Unified Banking System v1.0
                         --- System Setup complete ---
 
                         Customer : {holderName}
                         Balance : {balance} OMR
 
-                        1) ATM Services 
-                        2) Account Management 
-                        3) Loan Services 
-                        4) Currency Exchange 
+                        1) ATM Services
+                        2) Account Management
+                        3) Loan Services
+                        4) Currency Exchange
                         5) Credit Card Portal
-                        6) Branch Services 
-                        7) Reports & Admin 
+                        6) Branch Services
+                        7) Reports & Admin
                         0) Exit
 
                     """);
@@ -183,7 +183,7 @@
                             Console.WriteLine("Reports & Admin");
                             break;
                         case 0:
-                            mainMenu();
+                            break;
                             break;
                         default:
                             Console.WriteLine("Invalid option. Please choose 1–8 or 0 to Exit.");

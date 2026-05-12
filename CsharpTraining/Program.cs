@@ -45,7 +45,6 @@
                 """);
 
             int option = 1;
-            Console.WriteLine("Select option: " +option);
 
             while (option != 0) 
             {

@@ -154,7 +154,23 @@
             
             void mainMenu()
             {
-                Console.WriteLine("This is the main menu");
+                Console.WriteLine("""
+
+                        NATIONAL BANK OF OMAN — Unified Banking System
+                    
+                        MAIN MENU 
+                        1) ATM Services 
+                        2) Account Management 
+                        3) Loan Services 
+                        4) Currency Exchange 
+                        5) Credit Card Portal
+                        6) Branch Services 
+                        7) Reports & Admin 
+                        8) [BONUS] Full Terminal
+                        0) Exit
+
+                    """);
+
             }
         }
     }

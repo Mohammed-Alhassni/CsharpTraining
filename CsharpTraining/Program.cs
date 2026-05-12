@@ -130,7 +130,6 @@
                                 Balance                              : {avgBalance}
                                 Account Active                       : {isActive}
                                 Account Type                         : {accountType}
-
                                 --- Customer Profile ---
                                 Employed                             : {isEmployed}
                                 Monthly Salary                       : {salary}

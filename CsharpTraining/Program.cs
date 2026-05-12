@@ -218,7 +218,7 @@
                             welcomeAndDisplay();
                             break;
                         case 2:
-                            Console.WriteLine("Account Data Viewer");
+                            accountDataViewer();
                             break;
                         case 3:
                             Console.WriteLine("ATM PIN Validation");
@@ -270,6 +270,52 @@
                             break;
                         default:
                             Console.WriteLine("Invalid option. Please choose 1–3 or 0 to Return main menu.");
+                            break;
+                    }
+                }
+                
+                void accountDataViewer()
+                {
+                    Console.WriteLine("""
+                                          View Your Data:
+                                                      
+                                          1) Account Number 
+                                          2) Holder Name 
+                                          3) Balance 
+                                          4) Account Status 
+                                          5) Account Type 
+                                          0) Back to Main Menu
+                                          
+                                      """);
+                    Console.Write("Select: ");
+                    int option =  Convert.ToInt32(Console.ReadLine());
+                    switch (option)
+                    {
+                        case 1:
+                            Console.WriteLine("Account Number: " + accountNumber);
+                            accountDataViewer();
+                            break;
+                        case 2:
+                            Console.WriteLine("Holder Name: " + holderName);
+                            accountDataViewer();
+                            break;
+                        case 3:
+                            Console.WriteLine("Balance: " + balance);
+                            accountDataViewer();
+                            break;
+                        case 4:
+                            Console.WriteLine("Account Status: " + (isActive ? "Active" : "Inactive"));
+                            accountDataViewer();
+                            break;
+                        case 5:
+                            Console.WriteLine("Account Type: " + accountType);
+                            accountDataViewer();
+                            break;
+                        case 0:
+                            mainMenu();
+                            break;
+                        default:
+                            Console.WriteLine("Invalid option. Please choose 1–5 or 0 to Return main menu.");
                             break;
                     }
                 }

@@ -20,26 +20,27 @@
             double avgBalance = 0;
 
             Console.WriteLine
-                ("""
+                ($"""
                 === SYSTEM SETUP — Enter Account & Customer Data ===
 
                 --- Account Profile ---
-                1) Account Number (int) current: 0
-                2) Holder Name (string) current: [not set]
-                3) Balance (double) current: 0.000 OMR
-                4) Account Active? (bool) current: false [enter 1=yes / 0=no]
-                5) Account Type (char) current: - [enter S / C / F]
+                1) Account Number (int) current: {accountNumber}
+                2) Holder Name (string) current: {holderName}
+                3) Balance (double) current: {avgBalance}
+                4) Account Active? (bool) current: {isActive} [enter 1=yes / 0=no]
+                5) Account Type (char) current: {accountType} [enter S / C / F]
                 --- Customer Profile ---
-                6) Employed? (bool) current: false [enter 1=yes / 0=no]
-                7) Monthly Salary (double) current: 0.000 OMR
-                8) Credit Score (int) current: 0
-                9) Age (int) current: 0
+                6) Employed? (bool) current: {isEmployed} [enter 1=yes / 0=no]
+                7) Monthly Salary (double) current: {salary}
+                8) Credit Score (int) current: {creditScore}
+                9) Age (int) current: {age}
                 --- Transaction Data ---
-                10) Last Deposit Amount (double) current: 0.000 OMR
-                11) Last Withdrawal (double) current: 0.000 OMR
-                12) Annual Interest Rate (double) current: 0.000 [e.g. 0.035 = 3.5%]
-                13) Avg Monthly Balance (double) current: 0.000 OMR
+                10) Last Deposit Amount (double) current: {deposit}
+                11) Last Withdrawal (double) current: {withdrawl}
+                12) Annual Interest Rate (double) current: {annualRate} [e.g. 0.035 = 3.5%]
+                13) Avg Monthly Balance (double) current: {avgBalance}
                 0) Setup complete — launch Main Menu
+
                 """);
 
             int option = Convert.ToInt32(Console.ReadLine());

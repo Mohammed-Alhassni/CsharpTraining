@@ -195,7 +195,17 @@
 
             void atmServices()
             {
+                Console.WriteLine("""
 
+                        === ATM Services ===
+
+                        1) ATM Welcome & Display
+                        2) Account Data Viewer
+                        3) ATM PIN Validation
+                        4) ATM Receipt Printer
+                        0) Exit
+
+                    """);
             }
             
         }

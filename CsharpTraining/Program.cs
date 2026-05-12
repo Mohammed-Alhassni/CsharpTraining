@@ -206,6 +206,36 @@
                         0) Exit
 
                     """);
+
+                int serviceOption = 1;
+
+                while (serviceOption != 0)
+                {
+                    Console.Write("Select: ");
+                    serviceOption = Convert.ToInt32(Console.ReadLine());
+
+                    switch (serviceOption)
+                    {
+                        case 1:
+                            Console.WriteLine("ATM Welcome & Display");
+                            break;
+                        case 2:
+                            Console.WriteLine("Account Data Viewer");
+                            break;
+                        case 3:
+                            Console.WriteLine("ATM PIN Validation");
+                            break;
+                        case 4:
+                            Console.WriteLine("ATM Receipt Printer");
+                            break;
+                        case 0:
+                            mainMenu();
+                            break;
+                        default:
+                            Console.WriteLine("Invalid option. Please choose 1–4 or 0 to Exit.");
+                            break;
+                    }
+                }
             }
             
         }

@@ -48,7 +48,7 @@
 
             while (option != 0) 
             {
-                Console.Write("Select option:");
+                Console.Write("Select option: ");
                 option = Convert.ToInt32(Console.ReadLine());
 
                 switch (option)

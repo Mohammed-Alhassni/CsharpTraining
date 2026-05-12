@@ -118,10 +118,19 @@
                         avgBalance = double.Parse(Console.ReadLine());
                         Console.WriteLine("Average Balance set to: " + avgBalance);
                         break;
+                    case 0:
+                        Console.WriteLine("Setup complete. Launching Main Menu... \n");
+                        mainMenu();
+                        break;
                     default:
                     Console.WriteLine("Invalid option. Please choose 1–13 or 0 to finish.");
                         break;
                 }
+            }
+            
+            void mainMenu()
+            {
+                Console.WriteLine("This is the main menu");
             }
         }
     }

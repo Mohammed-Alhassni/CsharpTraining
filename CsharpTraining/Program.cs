@@ -44,9 +44,85 @@
 
                 """);
 
-            int option = Convert.ToInt32(Console.ReadLine());
+            int option = 1;
             Console.WriteLine("Select option: " +option);
 
+            while (option != 0) 
+            {
+                Console.Write("Select option:");
+                option = Convert.ToInt32(Console.ReadLine());
+
+                switch (option)
+                {
+                    case 1:
+                        Console.Write("Enter Account number: ");
+                        accountNumber = int.Parse(Console.ReadLine());
+                        Console.WriteLine("Account Number set to: " + accountNumber);
+                        break;
+                    case 2:
+                        Console.Write("Enter Holder Name: ");
+                        holderName = Convert.ToString(Console.ReadLine());
+                        Console.WriteLine("Holder Name set to: " + holderName);
+                        break;
+                    case 3:
+                        Console.Write("Enter Balance: ");
+                        balance = double.Parse(Console.ReadLine());
+                        Console.WriteLine("Balance set to: " + balance);
+                        break;
+                    case 4:
+                        Console.Write("Is Account Active? [enter 1=yes / 0=no]");
+                        isActive = bool.Parse(Console.ReadLine());
+                        Console.WriteLine("Account is to:" + isActive);
+                        break;
+                    case 5:
+                        Console.Write("Enter Account type: [enter S / C / F]");
+                        accountType = char.Parse(Console.ReadLine());
+                        Console.WriteLine("Account Type set to: " + accountType);
+                        break;
+                    case 6:
+                        Console.Write("Are you Employed? [enter 1=yes / 0=no]");
+                        isEmployed = bool.Parse(Console.ReadLine());
+                        Console.WriteLine("Employment set to: " + isEmployed);
+                        break;
+                    case 7:
+                        Console.Write("Enter you Salary: ");
+                        salary = double.Parse(Console.ReadLine());
+                        Console.WriteLine("Salary set to: " + salary);
+                        break;
+                    case 8:
+                        Console.Write("What is your Credit Score: ");
+                        creditScore = int.Parse(Console.ReadLine());
+                        Console.WriteLine("Credit Score set to: " + creditScore);
+                        break;
+                    case 9:
+                        Console.Write("What is your Age: ");
+                        age = int.Parse(Console.ReadLine());
+                        Console.WriteLine("Age set to: " + age);
+                        break;
+                    case 10:
+                        Console.Write("Enter Deposit amount: ");
+                        deposit = double.Parse(Console.ReadLine());
+                        Console.WriteLine("Deposit set to: " + deposit);
+                        break;
+                    case 11:
+                        Console.Write("Enter withdrawl amount: ");
+                        withdrawl = double.Parse(Console.ReadLine());
+                        Console.WriteLine("Withdrawl set to: " + withdrawl);
+                        break;
+                    case 12:
+                        Console.Write("Enter Annual Rate: [e.g. 0.035 = 3.5%]");
+                        annualRate = double.Parse(Console.ReadLine());
+                        Console.WriteLine("Annual Rate set to: " + annualRate);
+                        break;
+                    case 13:
+                        Console.Write("Enter Average monthly balance: ");
+                        avgBalance = double.Parse(Console.ReadLine());
+                        Console.WriteLine("Average Balance set to: " + avgBalance);
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
     }
 }

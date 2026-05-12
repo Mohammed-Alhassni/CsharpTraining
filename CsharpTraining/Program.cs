@@ -70,8 +70,8 @@
                         break;
                     case 4:
                         Console.Write("Is Account Active? [enter 1=yes / 0=no]");
-                        isActive = bool.Parse(Console.ReadLine());
-                        Console.WriteLine("Account is to:" + isActive);
+                        isActive = Convert.ToBoolean(int.Parse(Console.ReadLine()));
+                        Console.WriteLine("Account is set to:" + isActive);
                         break;
                     case 5:
                         Console.Write("Enter Account type: [enter S / C / F]");

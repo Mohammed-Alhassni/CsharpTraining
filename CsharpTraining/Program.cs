@@ -133,7 +133,7 @@
             {
                 Console.WriteLine("""
 
-                        NATIONAL BANK OF OMAN — Unified Banking System
+                        === NATIONAL BANK OF OMAN ===
                     
                         MAIN MENU 
                         1) ATM Services 

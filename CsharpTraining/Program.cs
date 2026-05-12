@@ -131,11 +131,16 @@
             
             void mainMenu()
             {
-                Console.WriteLine("""
+                Console.WriteLine($"""
 
                         === NATIONAL BANK OF OMAN ===
                     
-                        MAIN MENU 
+                        Unified Banking System v1.0
+                        --- System Setup complete ---
+
+                        Customer : {holderName}
+                        Balance : {balance} OMR
+
                         1) ATM Services 
                         2) Account Management 
                         3) Loan Services 

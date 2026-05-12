@@ -215,7 +215,7 @@
                     switch (serviceOption)
                     {
                         case 1:
-                            Console.WriteLine("ATM Welcome & Display");
+                            welcomeAndDisplay();
                             break;
                         case 2:
                             Console.WriteLine("Account Data Viewer");
@@ -231,6 +231,45 @@
                             break;
                         default:
                             Console.WriteLine("Invalid option. Please choose 1–4 or 0 to Exit.");
+                            break;
+                    }
+                }
+
+                void welcomeAndDisplay()
+                {
+                    Console.WriteLine("""
+                                          Welcome to National Bank of Oman
+                                                      
+                                          1) Bank Info
+                                          2) Branch Info
+                                          3) Opening Hours
+                                          0) Back to Main Menu
+                                          
+                                      """);
+                    Console.Write("Select: ");
+                    int option =  Convert.ToInt32(Console.ReadLine());
+                    switch (option)
+                    {
+                        case 1:
+                            Console.WriteLine("Bank Name: National Bank of Oman");
+                            Console.WriteLine("Since 2005");
+                            welcomeAndDisplay();
+                            break;
+                        case 2:
+                            Console.WriteLine("Branch Name: Muscat National Bank of Oman");
+                            Console.WriteLine("Muscat");
+                            welcomeAndDisplay();
+                            break;
+                        case 3:
+                            Console.WriteLine("Weekday hours: 7-5");
+                            Console.WriteLine("Weekend hours: 9-3");
+                            welcomeAndDisplay();
+                            break;
+                        case 0:
+                            mainMenu();
+                            break;
+                        default:
+                            Console.WriteLine("Invalid option. Please choose 1–3 or 0 to Return main menu.");
                             break;
                     }
                 }

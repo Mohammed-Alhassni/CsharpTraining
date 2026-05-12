@@ -6,6 +6,7 @@
         {
            // Shared varibles
             int accountNumber = 0;
+            string holderName = " ";
             double balance = 0;
             bool isActive= false;
             char accountType = ' ';

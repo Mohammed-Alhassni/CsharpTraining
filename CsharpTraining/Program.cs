@@ -228,7 +228,7 @@
                             atmPinValidation();
                             break;
                         case 4:
-                            Console.WriteLine("ATM Receipt Printer");
+                            atmReceiptPrinter();
                             break;
                         case 0:
                             mainMenu();
@@ -378,6 +378,65 @@
                         }
                     }
                 }
+
+                void atmReceiptPrinter()
+                {
+                    Console.WriteLine("""
+                                          === PRINT RECEIPT ===
+                                                      
+                                          1) Short Receipt
+                                          2) Detailed Receipt
+                                          3) Balance Only
+                                          0) Back
+                                          
+                                      """);
+                    int option = 1;
+                    while (option != 0)
+                    {
+                        Console.Write("Select: ");
+                        option = Convert.ToInt32(Console.ReadLine());
+                        switch (option)
+                        {
+                            case 1:
+                                string accountNumberString = accountNumber.ToString();
+                                string maskedAccountNumber = (new string('*', accountNumberString.Length - (int) (accountNumberString.Length)/2)) + accountNumberString.Substring(accountNumberString.Length - (int) (accountNumberString.Length)/2);
+                                Console.WriteLine("Account: " + maskedAccountNumber);
+                                Console.WriteLine("Holder: " + holderName);
+                                Console.WriteLine("Balance: " + Math.Round(balance, 3) + " OMR");
+                                break;
+                            case 2:
+                                Console.WriteLine
+                                ($"""
+
+                                    --- Account Profile ---
+                                    Account Number                       : {accountNumber}
+                                    Holder Name                          : {holderName}
+                                    Balance                              : {Math.Round(balance, 3)}  OMR
+                                    Account Active                       : {isActive}
+                                    Account Type                         : {accountType}
+
+                                    --- Customer Profile ---
+                                    Employed                             : {isEmployed}
+                                    Monthly Salary                       : {salary}
+                                    Credit Score                         : {creditScore}
+                                    Age                                  : {age}
+
+                                    --- Transaction Data ---
+                                    Last Deposit Amount                 : {deposit}
+                                    Last Withdrawal                     : {withdrawl}
+                                    Annual Interest Rate                : {annualRate}
+                                    Avg Monthly Balance                 : {avgBalance}
+
+                                 """);
+                                break;
+                            case 3:
+                                Console.WriteLine("Balace: " + Math.Round(balance, 3) + " OMR");
+                                break;
+                            case 0:
+                                atmServices();
+                                break;
+                            default:
+                                Console.WriteLine("Invalid option. Please choose 1–3 or 0 to go back.");
                                 break;
                         }
                     }

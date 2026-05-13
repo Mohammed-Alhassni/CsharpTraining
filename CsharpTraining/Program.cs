@@ -556,13 +556,16 @@
                         switch (option)
                         {
                             case 1:
-                                if (isEmployed && salary >= 400 && creditScore > 650) { Eligibility= "Eligible for Personal Loan."; }
+                                if (isEmployed && salary >= 400 && creditScore > 650) { Console.WriteLine("Eligible for Personal Loan."); }
+                                else { Console.WriteLine("Not eligible for Personal Loan."); }
                                 break;
                             case 2:
-                                if (isEmployed && salary >= 600 && age >= 21) { Eligibility = "Eligible for Car Loan."; }
+                                if (isEmployed && salary >= 600 && age >= 21) { Console.WriteLine("Eligible for Car Loan."); }
+                                else { Console.WriteLine("Not eligible for Car Loan."); } 
                                 break;
                             case 3:
-                                if (isEmployed && salary >= 1000 && creditScore > 700 && age >= 25) { Eligibility = "Eligible for Home Loan."; }
+                                if (isEmployed && salary >= 1000 && creditScore > 700 && age >= 25) { Console.WriteLine("Eligible for Home Loan."); }
+                                else { Console.WriteLine("Npt eligible for Home Loan."); } 
                                 break;
                             case 0:
                                 accountManagment();

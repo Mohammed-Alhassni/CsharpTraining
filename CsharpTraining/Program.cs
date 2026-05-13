@@ -165,7 +165,7 @@
                             atmServices();
                             break;
                         case 2:
-                            Console.WriteLine("Account Management");
+                            accountManagment();
                             break;
                         case 3:
                             Console.WriteLine("Loan Services");
@@ -441,6 +441,11 @@
                         }
                     }
                 }
+            }
+
+            void accountManagment()
+            {
+
             }
         }
     }

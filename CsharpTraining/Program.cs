@@ -26,7 +26,7 @@
                     --- Account Profile ---
                     1) Account Number                       current: {accountNumber}
                     2) Holder Name                          current: {holderName}
-                    3) Balance                              current: {avgBalance}
+                    3) Balance                              current: {balance}
                     4) Account Active? [enter 1=yes / 0=no] current: {isActive}
                     5) Account Type [enter S / C / F]       current: {accountType}
 

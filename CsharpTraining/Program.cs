@@ -205,7 +205,7 @@
                         2) Account Data Viewer
                         3) ATM PIN Validation
                         4) ATM Receipt Printer
-                        0) Exit
+                        0) Return to Main Menu
 
                     """);
 
@@ -234,7 +234,7 @@
                             mainMenu();
                             break;
                         default:
-                            Console.WriteLine("Invalid option. Please choose 1–4 or 0 to Exit.");
+                            Console.WriteLine("Invalid option. Please choose 1–4 or 0 to retrun to main menu.");
                             break;
                     }
                 }
@@ -273,7 +273,7 @@
                                 atmServices();
                                 break;
                             default:
-                                Console.WriteLine("Invalid option. Please choose 1–3 or 0 to Return main menu.");
+                                Console.WriteLine("Invalid option. Please choose 1–3 or 0 to go back.");
                                 break;
                         }
                     }
@@ -319,7 +319,7 @@
                                 atmServices();
                                 break;
                             default:
-                                Console.WriteLine("Invalid option. Please choose 1–5 or 0 to Return main menu.");
+                                Console.WriteLine("Invalid option. Please choose 1–5 or 0 to go back.");
                                 break;
                         }
                     }   
@@ -373,7 +373,11 @@
                                 atmServices();
                                 break;
                             default:
-                                Console.WriteLine("Invalid option. Please choose 1–2 or 0 to Return main menu.");
+                                Console.WriteLine("Invalid option. Please choose 1–2 or 0 to go back.");
+                                break;
+                        }
+                    }
+                }
                                 break;
                         }
                     }

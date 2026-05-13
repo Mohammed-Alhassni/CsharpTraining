@@ -278,7 +278,7 @@
                 void accountDataViewer()
                 {
                     Console.WriteLine("""
-                                          View Your Data:
+                                          === VIEW ACCOUNT DATA ===
                                                       
                                           1) Account Number 
                                           2) Holder Name 

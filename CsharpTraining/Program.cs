@@ -535,7 +535,44 @@
 
                 void loanEligibilityChecker()
                 {
+                    string Eligibility = "Not eligible.";
 
+                    Console.WriteLine($"""
+                                          === LOAN ELIGIBILITY ===
+
+                                           Holder: {holderName} | Salary: {salary} OMR | Score: {creditScore} | Age: {age}          
+                                         
+                                          1) Personal Loan
+                                          2) Car Loan
+                                          3) Home Loan
+                                          0) Back
+                                          
+                                      """);
+                    int option = 1;
+                    while (option != 0)
+                    {
+                        Console.Write("Select: ");
+                        option = Convert.ToInt32(Console.ReadLine());
+                        switch (option)
+                        {
+                            case 1:
+                                if (isEmployed && salary >= 400 && creditScore > 650) { Eligibility= "Eligible for Personal Loan."; }
+                                break;
+                            case 2:
+                                if (isEmployed && salary >= 600 && age >= 21) { Eligibility = "Eligible for Car Loan."; }
+                                break;
+                            case 3:
+                                if (isEmployed && salary >= 1000 && creditScore > 700 && age >= 25) { Eligibility = "Eligible for Home Loan."; }
+                                break;
+                            case 0:
+                                accountManagment();
+                                break;
+                            default:
+                                Console.WriteLine("Invalid option. Please choose 1–3 or 0 to go back.");
+                                break;
+                        }
+                    }
+                    Console.WriteLine(Eligibility);
                 }
             }
         }

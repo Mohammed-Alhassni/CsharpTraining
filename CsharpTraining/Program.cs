@@ -250,31 +250,32 @@
                                           0) Back
                                           
                                       """);
-                    Console.Write("Select: ");
-                    int option =  Convert.ToInt32(Console.ReadLine());
-                    switch (option)
+                    int option = 1;
+                    while (option != 0)
                     {
-                        case 1:
-                            Console.WriteLine("Bank Name: National Bank of Oman");
-                            Console.WriteLine("Since 2005");
-                            welcomeAndDisplay();
-                            break;
-                        case 2:
-                            Console.WriteLine("Branch Name: Muscat National Bank of Oman");
-                            Console.WriteLine("Muscat");
-                            welcomeAndDisplay();
-                            break;
-                        case 3:
-                            Console.WriteLine("Weekday hours: 7-5");
-                            Console.WriteLine("Weekend hours: 9-3");
-                            welcomeAndDisplay();
-                            break;
-                        case 0:
-                            atmServices();
-                            break;
-                        default:
-                            Console.WriteLine("Invalid option. Please choose 1–3 or 0 to Return main menu.");
-                            break;
+                        Console.Write("Select: ");
+                        option = Convert.ToInt32(Console.ReadLine());
+                        switch (option)
+                        {
+                            case 1:
+                                Console.WriteLine("Bank Name: National Bank of Oman");
+                                Console.WriteLine("Since 2005");
+                                break;
+                            case 2:
+                                Console.WriteLine("Branch Name: Muscat National Bank of Oman");
+                                Console.WriteLine("Muscat");
+                                break;
+                            case 3:
+                                Console.WriteLine("Weekday hours: 7-5");
+                                Console.WriteLine("Weekend hours: 9-3");
+                                break;
+                            case 0:
+                                atmServices();
+                                break;
+                            default:
+                                Console.WriteLine("Invalid option. Please choose 1–3 or 0 to Return main menu.");
+                                break;
+                        }
                     }
                 }
                 

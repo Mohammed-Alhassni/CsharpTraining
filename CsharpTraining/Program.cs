@@ -485,7 +485,47 @@
 
                 void transactionCalculator()
                 {
+                    Console.WriteLine($"""
+                                          === TRANSACTION CALCULATOR ===
 
+                                           Using balance = {balance} OMR  |  deposit = {deposit} OMR  |  rate = {annualRate * 100} %           
+                                         
+                                          1) Balance After Deposit
+                                          2) Balance After Withdrawal
+                                          3) Annual Interest Earned
+                                          4) Net Balance Change
+                                          0) Back
+                                          
+                                      """);
+                    int option = 1;
+                    while (option != 0)
+                    {
+                        Console.Write("Select: ");
+                        option = Convert.ToInt32(Console.ReadLine());
+                        switch (option)
+                        {
+                            case 1:
+                                Console.WriteLine("Balance after deposit: " + Math.Round(balance + deposit) + " OMR");
+                                break;
+                            case 2:
+                                Console.WriteLine("Balance after withdrawl: " + Math.Round(balance - withdrawl) + " OMR");
+                                break;
+                            case 3:
+                                Console.WriteLine("Annual Rate: " + annualRate * 100 + " %");
+                                Console.WriteLine("Annual Interest Earned: " + Math.Round(balance * annualRate) + " OMR");
+                                break;
+                            case 4:
+                                Console.Write("Net: " + (deposit - withdrawl) + " OMR => ");
+                                Console.WriteLine((deposit - withdrawl) > 0? "Surplus" : "Deficit");
+                                break;
+                            case 0:
+                                accountManagment();
+                                break;
+                            default:
+                                Console.WriteLine("Invalid option. Please choose 1–4 or 0 to go back.");
+                                break;
+                        }
+                    }
                 }
 
                 void accountTypeInformation()

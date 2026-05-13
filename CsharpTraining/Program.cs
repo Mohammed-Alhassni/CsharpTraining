@@ -352,6 +352,7 @@
                                     if (pin.Length == 4 && pin == correctPin)
                                     {
                                         Console.WriteLine("Access granted. Welcome, " + holderName);
+                                        break;
                                     }
                                     else if (pin.Length != 4)
                                     {

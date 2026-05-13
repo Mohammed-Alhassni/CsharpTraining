@@ -531,13 +531,50 @@
 
                 void accountTypeInformation()
                 {
+                    Console.WriteLine($"""
+                                         === ACCOUNT TYPES ===
 
+                                           Your account type: {accountType}      
+                                         
+                                          1) Savings Account
+                                          2) Current Account
+                                          3) Fixed Deposit
+                                          4) Junior Account
+                                          0) Back
+                                          
+                                      """);
+                    int option = 1;
+                    while (option != 0)
+                    {
+                        Console.Write("Select: ");
+                        option = Convert.ToInt32(Console.ReadLine());
+                        switch (option)
+                        {
+
+                            case 1:
+
+                                break;
+                            case 2:
+
+                                break;
+                            case 3:
+
+                                break;
+                            case 4:
+
+                                break;
+                            case 0:
+                                accountManagment();
+                                break;
+                            default:
+                                Console.WriteLine("Invalid option. Please choose 1–4 or 0 to go back.");
+                                break;
+                        }
+                    }
                 }
 
                 void loanEligibilityChecker()
                 {
-                    string Eligibility = "Not eligible.";
-
                     Console.WriteLine($"""
                                           === LOAN ELIGIBILITY ===
 
@@ -576,7 +613,8 @@
                                 break;
                         }
                     }
-                    Console.WriteLine(Eligibility);
+                }
+            }
 
             void loanServices()
             {

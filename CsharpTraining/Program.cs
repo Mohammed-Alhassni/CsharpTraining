@@ -168,7 +168,7 @@
                             accountManagment();
                             break;
                         case 3:
-                            Console.WriteLine("Loan Services");
+                            loanServices();
                             break;
                         case 4:
                             Console.WriteLine("Currency Exchange");
@@ -577,6 +577,59 @@
                         }
                     }
                     Console.WriteLine(Eligibility);
+
+            void loanServices()
+            {
+                Console.WriteLine("""
+
+                        === Loan Services ===
+
+                        1) ATM Withdrawal Gate
+                        2) Transaction Fee Board
+                        3) Loan Repayment Calculator
+                        0) Return to Main Menu
+
+                    """);
+
+                int serviceOption = 1;
+
+                while (serviceOption != 0)
+                {
+                    Console.Write("Select: ");
+                    serviceOption = Convert.ToInt32(Console.ReadLine());
+
+                    switch (serviceOption)
+                    {
+                        case 1:
+                            atmWithDrawlGate();
+                            break;
+                        case 2:
+                            transactionFeeBoard();
+                            break;
+                        case 3:
+                            loadRepaymentCalculator();
+                            break;
+                        case 0:
+                            mainMenu();
+                            break;
+                        default:
+                            Console.WriteLine("Invalid option. Please choose 1–3 or 0 to retrun to main menu.");
+                            break;
+                    }
+                }
+                void atmWithDrawlGate() 
+                {
+
+                }
+
+                void transactionFeeBoard()
+                {
+
+                }
+
+                void loadRepaymentCalculator()
+                {
+
                 }
             }
         }

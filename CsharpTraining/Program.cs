@@ -292,37 +292,37 @@
                                           0) Back
                                           
                                       """);
-                    Console.Write("Select: ");
-                    int option =  Convert.ToInt32(Console.ReadLine());
-                    switch (option)
+                    int option = 1;
+                    while (option != 0)
                     {
-                        case 1:
-                            Console.WriteLine("Account Number: " + accountNumber);
-                            accountDataViewer();
-                            break;
-                        case 2:
-                            Console.WriteLine("Holder Name: " + holderName);
-                            accountDataViewer();
-                            break;
-                        case 3:
-                            Console.WriteLine("Balance: " + balance);
-                            accountDataViewer();
-                            break;
-                        case 4:
-                            Console.WriteLine("Account Status: " + (isActive ? "Active" : "Inactive"));
-                            accountDataViewer();
-                            break;
-                        case 5:
-                            Console.WriteLine("Account Type: " + accountType);
-                            accountDataViewer();
-                            break;
-                        case 0:
-                            atmServices();
-                            break;
-                        default:
-                            Console.WriteLine("Invalid option. Please choose 1–5 or 0 to Return main menu.");
-                            break;
-                    }
+                        Console.Write("Select: ");
+                        option = Convert.ToInt32(Console.ReadLine());
+
+                        switch (option)
+                        {
+                            case 1:
+                                Console.WriteLine("Account Number: " + accountNumber);
+                                break;
+                            case 2:
+                                Console.WriteLine("Holder Name: " + holderName);
+                                break;
+                            case 3:
+                                Console.WriteLine("Balance: " + balance);
+                                break;
+                            case 4:
+                                Console.WriteLine("Account Status: " + (isActive ? "Active" : "Inactive"));
+                                break;
+                            case 5:
+                                Console.WriteLine("Account Type: " + accountType);
+                                break;
+                            case 0:
+                                atmServices();
+                                break;
+                            default:
+                                Console.WriteLine("Invalid option. Please choose 1–5 or 0 to Return main menu.");
+                                break;
+                        }
+                    }   
                 }
 
                 void atmPinValidation()

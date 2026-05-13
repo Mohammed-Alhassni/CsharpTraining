@@ -445,7 +445,58 @@
 
             void accountManagment()
             {
+                Console.WriteLine("""
 
+                        === Account Management ===
+
+                        1) Transaction Calculator
+                        2) Account Type Information
+                        3) Loan Eligibility Checker
+                        0) Return to Main Menu
+
+                    """);
+
+                int serviceOption = 1;
+
+                while (serviceOption != 0)
+                {
+                    Console.Write("Select: ");
+                    serviceOption = Convert.ToInt32(Console.ReadLine());
+
+                    switch (serviceOption)
+                    {
+                        case 1:
+                            transactionCalculator();
+                            break;
+                        case 2:
+                            accountTypeInformation();
+                            break;
+                        case 3:
+                            loanEligibilityChecker();
+                            break;
+                        case 0:
+                            mainMenu();
+                            break;
+                        default:
+                            Console.WriteLine("Invalid option. Please choose 1–3 or 0 to retrun to main menu.");
+                            break;
+                    }
+                }
+
+                void transactionCalculator()
+                {
+
+                }
+
+                void accountTypeInformation()
+                {
+
+                }
+
+                void loanEligibilityChecker()
+                {
+
+                }
             }
         }
     }

@@ -364,11 +364,9 @@
                                     }
                                 }
                                 if (maxAttempts < 1) { Console.WriteLine("Max Attempts Have been reached."); }
-                                atmPinValidation();
                                 break;
                             case 2:
                                 Console.WriteLine("Please visit the nearest branch with your National ID.");
-                                atmPinValidation();
                                 break;
                             case 0:
                                 atmServices();

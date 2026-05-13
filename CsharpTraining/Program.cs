@@ -335,15 +335,13 @@
                                           0) Back
                                           
                                       """);
-                    int option = 1;
-                    while (option != 0)
-                    {
-                    Console.Write("Select: ");
+
                     int option = 1;
                     while (option != 0)
                     {
                         Console.Write("Select: ");
                         option = Convert.ToInt32(Console.ReadLine());
+
                         switch (option)
                         {
                             case 1:

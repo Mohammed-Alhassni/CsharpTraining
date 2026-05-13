@@ -183,6 +183,7 @@
                             Console.WriteLine("Reports & Admin");
                             break;
                         case 0:
+                            Environment.Exit(1);
                             break;
                         default:
                             Console.WriteLine("Invalid option. Please choose 1–8 or 0 to Exit.");

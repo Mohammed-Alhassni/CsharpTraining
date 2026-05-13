@@ -247,7 +247,7 @@
                                           1) Bank Info
                                           2) Branch Info
                                           3) Opening Hours
-                                          0) Back to Main Menu
+                                          0) Back
                                           
                                       """);
                     Console.Write("Select: ");
@@ -270,7 +270,7 @@
                             welcomeAndDisplay();
                             break;
                         case 0:
-                            mainMenu();
+                            atmServices();
                             break;
                         default:
                             Console.WriteLine("Invalid option. Please choose 1–3 or 0 to Return main menu.");
@@ -288,7 +288,7 @@
                                           3) Balance 
                                           4) Account Status 
                                           5) Account Type 
-                                          0) Back to Main Menu
+                                          0) Back
                                           
                                       """);
                     Console.Write("Select: ");
@@ -316,7 +316,7 @@
                             accountDataViewer();
                             break;
                         case 0:
-                            mainMenu();
+                            atmServices();
                             break;
                         default:
                             Console.WriteLine("Invalid option. Please choose 1–5 or 0 to Return main menu.");
@@ -331,7 +331,7 @@
                                                       
                                           1) Enter PIN
                                           2) Forgot PIN
-                                          0) Back to Main Menu
+                                          0) Back
                                           
                                       """);
                     Console.Write("Select: ");
@@ -366,7 +366,7 @@
                             atmPinValidation();
                             break;
                         case 0:
-                            mainMenu();
+                            atmServices();
                             break;
                         default:
                             Console.WriteLine("Invalid option. Please choose 1–2 or 0 to Return main menu.");

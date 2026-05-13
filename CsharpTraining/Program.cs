@@ -336,42 +336,47 @@
                                           
                                       """);
                     Console.Write("Select: ");
-                    int option = Convert.ToInt32(Console.ReadLine());
-                    switch (option)
+                    int option = 1;
+                    while (option != 0)
                     {
-                        case 1:
-                            while(maxAttempts > 0)
-                            {
-                                Console.Write("Enter PIN: ");
-                                string pin= Console.ReadLine();
-                                if (pin.Length== 4 && pin == correctPin) 
+                        Console.Write("Select: ");
+                        option = Convert.ToInt32(Console.ReadLine());
+                        switch (option)
+                        {
+                            case 1:
+                                while (maxAttempts > 0)
                                 {
-                                    Console.WriteLine("Access granted. Welcome, " + holderName);
+                                    Console.Write("Enter PIN: ");
+                                    string pin = Console.ReadLine();
+                                    if (pin.Length == 4 && pin == correctPin)
+                                    {
+                                        Console.WriteLine("Access granted. Welcome, " + holderName);
+                                    }
+                                    else if (pin.Length != 4)
+                                    {
+                                        Console.WriteLine("Invalid PIN format.");
+                                        maxAttempts--;
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("Incorrect PIN.");
+                                        maxAttempts--;
+                                    }
                                 }
-                                else if (pin.Length!= 4) 
-                                {
-                                    Console.WriteLine("Invalid PIN format.");
-                                    maxAttempts --;
-                                } 
-                                else
-                                {
-                                    Console.WriteLine("Incorrect PIN.");
-                                    maxAttempts --;
-                                }
-                            }
-                            if (maxAttempts < 1) { Console.WriteLine("Max Attempts Have been reached."); }
-                            atmPinValidation();
-                            break;
-                        case 2:
-                            Console.WriteLine("Please visit the nearest branch with your National ID.");
-                            atmPinValidation();
-                            break;
-                        case 0:
-                            atmServices();
-                            break;
-                        default:
-                            Console.WriteLine("Invalid option. Please choose 1–2 or 0 to Return main menu.");
-                            break;
+                                if (maxAttempts < 1) { Console.WriteLine("Max Attempts Have been reached."); }
+                                atmPinValidation();
+                                break;
+                            case 2:
+                                Console.WriteLine("Please visit the nearest branch with your National ID.");
+                                atmPinValidation();
+                                break;
+                            case 0:
+                                atmServices();
+                                break;
+                            default:
+                                Console.WriteLine("Invalid option. Please choose 1–2 or 0 to Return main menu.");
+                                break;
+                        }
                     }
                 }
             }

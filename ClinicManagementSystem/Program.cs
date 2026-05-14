@@ -83,6 +83,38 @@
 
                             switch (patientOption)
                             {
+                                case 1:
+                                    if (patientCount == MAX_PATIENTS)
+                                    {
+                                        Console.WriteLine("Clinic is full. Cannot add more patients.");
+                                    } else
+                                    {
+                                        string name;
+                                        Console.Write("Enter name: "); name = Console.ReadLine();
+                                        if (name == "") { Console.WriteLine("Invalid Name"); break; }
+                                        int age;
+                                        Console.Write("Enter Age: "); age = int.Parse(Console.ReadLine());
+                                        if (age < 0 || age > 120) { Console.WriteLine("Invalid Age"); break; }
+                                        string phone;
+                                        Console.Write("Enter Phone Number: "); phone = Console.ReadLine();
+                                        if (phone == "") { Console.WriteLine("Invalid Phone Number"); break; }
+
+                                        if (!p1Active)
+                                        {
+                                            p1Name = name; p1Age = age; p1Phone = phone; p1Active = true;
+                                        }
+                                        else if (!p2Active)
+                                        {
+                                            p2Name = name; p2Age = age; p2Phone = phone; p2Active = true;
+                                        }
+                                        else if (!p3Active)
+                                        {
+                                            p3Name = name; p3Age = age; p3Phone = phone; p3Active = true;
+                                        }
+
+                                        patientCount++;
+                                    }
+                                    break;
                                 case 0:
                                     patientOption = 0;
                                     break;

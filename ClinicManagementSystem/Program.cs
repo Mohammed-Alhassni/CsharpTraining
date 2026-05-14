@@ -129,6 +129,13 @@
                                     if (p2Active && p2Name == targetPatient) { Console.Write("Enter new phone: "); p2Phone = Console.ReadLine(); Console.Write($"{targetPatient} phone updated."); }
                                     if (p3Active && p3Name == targetPatient) { Console.Write("Enter new phone: "); p3Phone = Console.ReadLine(); Console.Write($"{targetPatient} phone updated."); }
                                     break;
+                                case 4:
+                                    string targetDeletePatient;
+                                    Console.Write("Enter Target Patient Name: "); targetDeletePatient = Console.ReadLine();
+                                    if (p1Active && p1Name == targetDeletePatient) { p1Name = ""; p1Age = 0; p1Phone = ""; p1Active = false; Console.Write($"{targetDeletePatient} phone updated."); }
+                                    if (p2Active && p2Name == targetDeletePatient) { p2Name = ""; p2Age = 0; p2Phone = ""; p2Active = false; Console.Write($"{targetDeletePatient} phone updated."); }
+                                    if (p3Active && p3Name == targetDeletePatient) { p2Name = ""; p2Age = 0; p2Phone = ""; p2Active = false; Console.Write($"{targetDeletePatient} phone updated."); }
+                                    break;
                                 case 0:
                                     patientOption = 0;
                                     break;

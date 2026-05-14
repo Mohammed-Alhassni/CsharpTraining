@@ -58,6 +58,39 @@
                 {
                     //Sub - Menus: one while loop per entity(inside the main menu switch-case case)
                     //Operations: the if-else logic for each CRUD action
+                    case 1:
+                        int patientOption = -1;
+                        while (patientOption != 0)
+                        {
+                            Console.Clear();
+                            Console.WriteLine("""
+
+                                ╔══════════════════════════════════════╗
+                                ║ PATIENT MANAGEMENT                   ║
+                                ╠══════════════════════════════════════╣
+                                ║ 1. Add New Patient                   ║
+                                ║ 2. Display All Patients              ║
+                                ║ 3. Update Patient Phone              ║
+                                ║ 4. Delete Patient                    ║
+                                ║ 0. Back to Main Menu                 ║
+                                ╚══════════════════════════════════════╝
+
+                            """);
+
+                            Console.Write("Enter your choice: ");
+                            patientOption = Convert.ToInt32(Console.ReadLine());
+
+                            switch (patientOption)
+                            {
+                                case 0:
+                                    patientOption = 0;
+                                    break;
+                                default:
+                                    break;
+                            }
+                        }
+
+                        break;
                     case 0:
                         break;
                     default:

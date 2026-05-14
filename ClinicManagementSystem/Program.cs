@@ -115,6 +115,13 @@
                                         patientCount++;
                                     }
                                     break;
+                                case 2:
+                                    int counter = 0;
+                                    if (patientCount == 0) { Console.WriteLine("No patients registered."); }
+                                    if (p1Active) { counter++; Console.WriteLine($"Patient #{counter} Name: {p1Name}, Age: {p1Age}, Phone: {p1Phone}"); }
+                                    if (p2Active) { counter++; Console.WriteLine($"Patient #{counter} Name: {p2Name}, Age: {p2Age}, Phone: {p2Phone}"); }
+                                    if (p3Active) { counter++; Console.WriteLine($"Patient #{counter} Name: {p3Name}, Age: {p3Age}, Phone: {p3Phone}"); }
+                                    break;
                                 case 0:
                                     patientOption = 0;
                                     break;

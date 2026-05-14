@@ -40,14 +40,14 @@
                 Console.Clear();
                 Console.WriteLine("""
 
-                    ╔══════════════════════════════════════╗
-                    ║ CLINIC MANAGEMENT SYSTEM             ║
-                    ╠══════════════════════════════════════╣
-                    ║ 1. Patient Management                ║
-                    ║ 2. Doctor Management                 ║
-                    ║ 3. Appointment Management            ║
-                    ║ 0. Exit                              ║
-                    ╚══════════════════════════════════════╝
+                        ╔══════════════════════════════════════╗
+                        ║ CLINIC MANAGEMENT SYSTEM             ║
+                        ╠══════════════════════════════════════╣
+                        ║ 1. Patient Management                ║
+                        ║ 2. Doctor Management                 ║
+                        ║ 3. Appointment Management            ║
+                        ║ 0. Exit                              ║
+                        ╚══════════════════════════════════════╝
 
                     """);
 
@@ -123,6 +123,40 @@
                             }
                         }
                         break;
+                    case 3:
+                        int appointmentOption = -1;
+                        while (appointmentOption != 0)
+                        {
+                            Console.Clear();
+                            Console.WriteLine("""
+
+                                ╔══════════════════════════════════════╗
+                                ║ APPOINTMENT MANAGEMENT               ║
+                                ╠══════════════════════════════════════╣
+                                ║ 1. Book New Appointment              ║
+                                ║ 2. Display All Appointments          ║
+                                ║ 3. Update Appointment Status         ║
+                                ║ 4. Cancel Appointment                ║
+                                ║ 0. Back to Main Menu                 ║
+                                ╚══════════════════════════════════════╝
+
+                            """);
+
+                            Console.Write("Enter your choice: ");
+                            appointmentOption = Convert.ToInt32(Console.ReadLine());
+
+                            switch (appointmentOption)
+                            {
+                                case 0:
+                                    appointmentOption = 0;
+                                    break;
+                                default:
+                                    break;
+                            }
+                        }
+                        break;
+                    case 0:
+                        option = 0;
                         break;
                     default:
                         Console.WriteLine("do NOT exit the program");

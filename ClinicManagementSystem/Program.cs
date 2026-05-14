@@ -37,6 +37,7 @@
 
             while (option != 0)
             {
+                Console.Clear();
                 Console.WriteLine("""
 
                     ╔══════════════════════════════════════╗
@@ -60,6 +61,7 @@
                     case 0:
                         break;
                     default:
+                        Console.WriteLine("do NOT exit the program");
                         break;
                 }
             }

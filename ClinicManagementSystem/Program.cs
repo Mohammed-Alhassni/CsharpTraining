@@ -91,7 +91,38 @@
                         }
 
                         break;
-                    case 0:
+                    case 2:
+                        int docotrOption = -1;
+                        while (docotrOption != 0)
+                        {
+                            Console.Clear();
+                            Console.WriteLine("""
+
+                                ╔══════════════════════════════════════╗
+                                ║ DOCTOR MANAGEMENT                    ║
+                                ╠══════════════════════════════════════╣
+                                ║ 1. Add New Doctor                    ║
+                                ║ 2. Display All Doctors               ║
+                                ║ 3. Update Consultation Fee           ║
+                                ║ 4. Delete Doctor                     ║
+                                ║ 0. Back to Main Menu                 ║
+                                ╚══════════════════════════════════════╝
+
+                            """);
+
+                            Console.Write("Enter your choice: ");
+                            docotrOption = Convert.ToInt32(Console.ReadLine());
+
+                            switch (docotrOption)
+                            {
+                                case 0:
+                                    docotrOption = 0;
+                                    break;
+                                default:
+                                    break;
+                            }
+                        }
+                        break;
                         break;
                     default:
                         Console.WriteLine("do NOT exit the program");

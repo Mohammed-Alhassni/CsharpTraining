@@ -122,6 +122,13 @@
                                     if (p2Active) { counter++; Console.WriteLine($"Patient #{counter} Name: {p2Name}, Age: {p2Age}, Phone: {p2Phone}"); }
                                     if (p3Active) { counter++; Console.WriteLine($"Patient #{counter} Name: {p3Name}, Age: {p3Age}, Phone: {p3Phone}"); }
                                     break;
+                                case 3:
+                                    string targetPatient;
+                                    Console.Write("Enter Target Patient Name: "); targetPatient = Console.ReadLine();
+                                    if (p1Active && p1Name == targetPatient) { Console.Write("Enter new phone: "); p1Phone = Console.ReadLine(); Console.Write($"{targetPatient} phone updated."); }
+                                    if (p2Active && p2Name == targetPatient) { Console.Write("Enter new phone: "); p2Phone = Console.ReadLine(); Console.Write($"{targetPatient} phone updated."); }
+                                    if (p3Active && p3Name == targetPatient) { Console.Write("Enter new phone: "); p3Phone = Console.ReadLine(); Console.Write($"{targetPatient} phone updated."); }
+                                    break;
                                 case 0:
                                     patientOption = 0;
                                     break;

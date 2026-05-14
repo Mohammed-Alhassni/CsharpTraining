@@ -87,6 +87,7 @@
                                     patientOption = 0;
                                     break;
                                 default:
+                                    Console.WriteLine("do NOT exit the program");
                                     break;
                             }
                         }
@@ -121,6 +122,7 @@
                                     docotrOption = 0;
                                     break;
                                 default:
+                                    Console.WriteLine("do NOT exit the program");
                                     break;
                             }
                         }
@@ -154,6 +156,7 @@
                                     appointmentOption = 0;
                                     break;
                                 default:
+                                    Console.WriteLine("do NOT exit the program");
                                     break;
                             }
                         }

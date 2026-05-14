@@ -37,6 +37,22 @@
 
             while (option != 0)
             {
+                Console.WriteLine("""
+
+                    ╔══════════════════════════════════════╗
+                    ║ CLINIC MANAGEMENT SYSTEM             ║
+                    ╠══════════════════════════════════════╣
+                    ║ 1. Patient Management                ║
+                    ║ 2. Doctor Management                 ║
+                    ║ 3. Appointment Management            ║
+                    ║ 0. Exit                              ║
+                    ╚══════════════════════════════════════╝
+
+                    """);
+
+                Console.Write("Enter your choice: ");
+                option = Convert.ToInt32(Console.ReadLine());
+
                 switch (option)
                 {
                     //Sub - Menus: one while loop per entity(inside the main menu switch-case case)

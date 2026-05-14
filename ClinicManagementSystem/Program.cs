@@ -34,10 +34,10 @@
 
             //Main Menu: the outer while loop + switch-case
             int option = -1;
+            Console.Clear();
 
             while (option != 0)
             {
-                Console.Clear();
                 Console.WriteLine("""
 
                         ╔══════════════════════════════════════╗
@@ -60,9 +60,10 @@
                     //Operations: the if-else logic for each CRUD action
                     case 1:
                         int patientOption = -1;
+                        Console.Clear();
+
                         while (patientOption != 0)
                         {
-                            Console.Clear();
                             Console.WriteLine("""
 
                                 ╔══════════════════════════════════════╗
@@ -93,9 +94,10 @@
                         break;
                     case 2:
                         int docotrOption = -1;
+                        Console.Clear();
+
                         while (docotrOption != 0)
                         {
-                            Console.Clear();
                             Console.WriteLine("""
 
                                 ╔══════════════════════════════════════╗
@@ -125,9 +127,10 @@
                         break;
                     case 3:
                         int appointmentOption = -1;
+                        Console.Clear();
+
                         while (appointmentOption != 0)
                         {
-                            Console.Clear();
                             Console.WriteLine("""
 
                                 ╔══════════════════════════════════════╗

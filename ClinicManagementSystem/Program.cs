@@ -207,6 +207,13 @@
                                     if (d1Active) { docCounter++; Console.WriteLine($"Doctor #{docCounter} Name: {d1Name}, Specialization: {d1Spec}, Fee: {d1Fee}"); }
                                     if (p2Active) { docCounter++; Console.WriteLine($"Doctor #{docCounter} Name: {d2Name}, Specialization: {d2Spec}, Fee: {d2Fee}"); }
                                     break;
+                                case 3:
+                                    string targetDoctor;
+                                    Console.Write("Enter Target Doctor Name: "); targetDoctor = Console.ReadLine();
+                                    if (d1Active && d1Name == targetDoctor) { Console.Write("Enter new fee: "); d1Fee = double.Parse(Console.ReadLine()); Console.Write($"{targetDoctor} fee updated."); }
+                                    else if (d2Active && d2Name == targetDoctor) { Console.Write("Enter new fee: "); d2Fee = double.Parse(Console.ReadLine()); Console.Write($"{targetDoctor} fee updated."); }
+                                    else { Console.WriteLine("This Doctor Does not exist "); }
+                                    break;
                                 case 0:
                                     docotrOption = 0;
                                     break;

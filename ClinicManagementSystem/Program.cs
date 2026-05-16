@@ -201,6 +201,12 @@
                                         doctorCount++;
                                     }
                                     break;
+                                case 2:
+                                    int docCounter = 0;
+                                    if (docCounter == 0) { Console.WriteLine("No doctors registered."); }
+                                    if (d1Active) { docCounter++; Console.WriteLine($"Doctor #{docCounter} Name: {d1Name}, Specialization: {d1Spec}, Fee: {d1Fee}"); }
+                                    if (p2Active) { docCounter++; Console.WriteLine($"Doctor #{docCounter} Name: {d2Name}, Specialization: {d2Spec}, Fee: {d2Fee}"); }
+                                    break;
                                 case 0:
                                     docotrOption = 0;
                                     break;

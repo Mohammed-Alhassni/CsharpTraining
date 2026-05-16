@@ -205,7 +205,7 @@
                                     int counter = 0;
                                     if (counter == 0) { Console.WriteLine("No doctors registered."); }
                                     if (d1Active) { counter++; Console.WriteLine($"Doctor #{counter} Name: {d1Name}, Specialization: {d1Spec}, Fee: {d1Fee}"); }
-                                    if (p2Active) { counter++; Console.WriteLine($"Doctor #{counter} Name: {d2Name}, Specialization: {d2Spec}, Fee: {d2Fee}"); }
+                                    if (d2Active) { counter++; Console.WriteLine($"Doctor #{counter} Name: {d2Name}, Specialization: {d2Spec}, Fee: {d2Fee}"); }
                                     break;
                                 case 3:
                                     string targetDoctor;

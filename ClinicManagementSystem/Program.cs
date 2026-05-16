@@ -173,6 +173,34 @@
 
                             switch (docotrOption)
                             {
+                                case 1:
+                                    if (doctorCount == MAX_DOCTORS)
+                                    {
+                                        Console.WriteLine("No available doctor slots.");
+                                    } else
+                                    {
+                                        string docName;
+                                        Console.Write("Enter doctor name: "); docName = Console.ReadLine();
+                                        if (docName == "") { Console.WriteLine("Invalid Name"); break; }
+                                        string specialization;
+                                        Console.Write("Enter doctor specialization: "); specialization = Console.ReadLine();
+                                        if (specialization == "") { Console.WriteLine("Invalid specialization name"); break; }
+                                        double fee;
+                                        Console.Write("Enter doctor fee: "); fee = Convert.ToDouble(Console.ReadLine());
+                                        if (fee < 0) { Console.WriteLine("Invalid fee value"); break; }
+                                        
+                                        if (!d1Active)
+                                        {
+                                            d1Name = docName; d1Spec = specialization; d1Fee = fee; d1Active = true;
+                                        }
+                                        else if (!d2Active)
+                                        {
+                                            d2Name = docName; d2Spec = specialization; d2Fee = fee; d2Active = true;
+                                        }
+
+                                        doctorCount++;
+                                    }
+                                    break;
                                 case 0:
                                     docotrOption = 0;
                                     break;

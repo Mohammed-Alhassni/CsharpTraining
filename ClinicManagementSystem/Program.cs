@@ -133,9 +133,9 @@
                                 case 4:
                                     string targetDeletePatient;
                                     Console.Write("Enter Target Patient Name: "); targetDeletePatient = Console.ReadLine();
-                                    if (p1Active && p1Name == targetDeletePatient) { p1Name = ""; p1Age = 0; p1Phone = ""; p1Active = false; Console.Write($"{targetDeletePatient} phone updated."); }
-                                    else if (p2Active && p2Name == targetDeletePatient) { p2Name = ""; p2Age = 0; p2Phone = ""; p2Active = false; Console.Write($"{targetDeletePatient} phone updated."); }
-                                    else if (p3Active && p3Name == targetDeletePatient) { p2Name = ""; p2Age = 0; p2Phone = ""; p2Active = false; Console.Write($"{targetDeletePatient} phone updated."); }
+                                    if (p1Active && p1Name == targetDeletePatient) { p1Name = ""; p1Age = 0; p1Phone = ""; p1Active = false; Console.Write($"{targetDeletePatient} have been deleted."); }
+                                    else if (p2Active && p2Name == targetDeletePatient) { p2Name = ""; p2Age = 0; p2Phone = ""; p2Active = false; Console.Write($"{targetDeletePatient} have been deleted."); }
+                                    else if (p3Active && p3Name == targetDeletePatient) { p2Name = ""; p2Age = 0; p2Phone = ""; p2Active = false; Console.Write($"{targetDeletePatient} have been deleted."); }
                                     else { Console.WriteLine("This Patient Does not exist "); }
                                     break;
                                 case 0:

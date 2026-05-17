@@ -218,7 +218,7 @@
                                     string targetDeleteDoctor;
                                     Console.Write("Enter Target Doctor Name: "); targetDeleteDoctor = Console.ReadLine();
                                     if (d1Active && d1Name == targetDeleteDoctor) { d1Name = ""; d1Fee = 0; d1Spec = ""; d1Active = false; doctorCount--; Console.Write($"{targetDeleteDoctor} have been deleted."); }
-                                    if (d2Active && d2Name == targetDeleteDoctor) { d2Name = ""; d2Fee = 0; d2Spec = ""; d2Active = false; doctorCount--; Console.Write($"{targetDeleteDoctor} have been deleted."); }
+                                    else if (d2Active && d2Name == targetDeleteDoctor) { d2Name = ""; d2Fee = 0; d2Spec = ""; d2Active = false; doctorCount--; Console.Write($"{targetDeleteDoctor} have been deleted."); }
                                     else { Console.WriteLine("This Doctor Does not exist "); }
                                     break;
                                 case 0:

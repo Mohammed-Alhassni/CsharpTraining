@@ -471,6 +471,35 @@
                                             break;
                                     }
                                     
+                                    Console.WriteLine("Press any key to continue");
+                                    Console.ReadKey();
+                                    Console.Clear();
+                                    break;
+                                case 4:
+                                    Console.Write("Enter Patient name: ");
+                                    string targetPatientname = Console.ReadLine();
+                                    Console.Write("Enter Appointment date: ");
+                                    string targetAppointmentDate = Console.ReadLine();
+
+                                    if (a1Patient == targetPatientname && a1Date==targetAppointmentDate)
+                                    {
+                                        a1Status = "Cancelled";
+                                        Console.WriteLine("Appointment cancelled");
+                                    } 
+                                    else if (a2Patient == targetPatientname && a2Date==targetAppointmentDate)
+                                    {
+                                        a2Status = "Cancelled";
+                                        Console.WriteLine("Appointment cancelled");
+                                    } 
+                                    else if (a3Patient == targetPatientname && a3Date==targetAppointmentDate)
+                                    {
+                                        a3Status = "Cancelled";
+                                        Console.WriteLine("Appointment cancelled");
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("Appointment not found.");
+                                    }
                                     
                                     Console.WriteLine("Press any key to continue");
                                     Console.ReadKey();

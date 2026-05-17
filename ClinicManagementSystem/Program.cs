@@ -304,25 +304,21 @@
                                         string chosenPatient = "";
                                         Console.Write("Choose patient number: ");
                                         choosePatient = Convert.ToInt32(Console.ReadLine());
-                                        if (choosePatient > patientCounter)
+                                        
+                                        switch (choosePatient)
                                         {
-                                            Console.WriteLine("Patient number " + choosePatient + " is not found");
-                                            break;
-                                        }
-                                        else
-                                        {
-                                            switch (choosePatient)
-                                            {
-                                                case 1:
-                                                    chosenPatient = p1Name;
-                                                    break;
-                                                case 2:
-                                                    chosenPatient = p2Name;
-                                                    break;
-                                                case 3:
-                                                    chosenPatient = p3Name;
-                                                    break;
-                                            }
+                                            case 1:
+                                                chosenPatient = p1Name;
+                                                break;
+                                            case 2:
+                                                chosenPatient = p2Name;
+                                                break;
+                                            case 3:
+                                                chosenPatient = p3Name;
+                                                break;
+                                            default:
+                                                Console.WriteLine("Patient number " + choosePatient + " is not found");
+                                                break;
                                         }
 
                                         int doctorCounter = 0;
@@ -333,24 +329,20 @@
                                         string chosenDoctor = "";
                                         Console.Write("Choose Doctor number: ");
                                         chooseDoctor = Convert.ToInt32(Console.ReadLine());
-                                        if (chooseDoctor > doctorCounter)
+                                        
+                                        switch (chooseDoctor)
                                         {
-                                            Console.WriteLine("Doctor number " + chooseDoctor + " is not found");
-                                            break;
+                                            case 1:
+                                                chosenDoctor = d1Name;
+                                                break;
+                                            case 2:
+                                                chosenDoctor = d2Name;
+                                                break;
+                                            default:
+                                                Console.WriteLine("Doctor number " + chooseDoctor + " is not found");
+                                                break;
                                         }
-                                        else
-                                        {
-                                            switch (chooseDoctor)
-                                            {
-                                                case 1:
-                                                    chosenDoctor = d1Name;
-                                                    break;
-                                                case 2:
-                                                    chosenDoctor = d2Name;
-                                                    break;
-                                            }
-                                        }
-
+                                        
                                         Console.Write("Enter Appointment date (format: DD/MM/YYYY): ");
                                         string date = Console.ReadLine();
 

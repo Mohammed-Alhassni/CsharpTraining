@@ -255,6 +255,106 @@
 
                             switch (appointmentOption)
                             {
+                                case 1:
+                                    if (appointmentCount == MAX_APPOINTMENTS)
+                                    {
+                                        Console.WriteLine("No available appointment slots.");
+                                    }
+                                    else if (patientCount == 0 || doctorCount == 0)
+                                    {
+                                        Console.WriteLine("Please add patients and doctors first.");
+                                    }
+                                    else
+                                    {
+                                        int patientCounter = 0;
+                                        if (p1Active) { patientCounter++; Console.WriteLine(patientCounter + ". " + p1Name); }
+                                        if (p2Active) { patientCounter++; Console.WriteLine(patientCounter + ". " + p2Name); }
+                                        if (p3Active) { patientCounter++; Console.WriteLine(patientCounter + ". " + p2Name); }
+
+                                        int choosePatient = 0;
+                                        string chosenPatient = "";
+                                        Console.Write("Choose patient number: ");
+                                        choosePatient = Convert.ToInt32(Console.ReadLine());
+                                        if (choosePatient > patientCounter)
+                                        {
+                                            Console.WriteLine("Patient number " + choosePatient + " is not found");
+                                            break;
+                                        }
+                                        else
+                                        {
+                                            switch (choosePatient)
+                                            {
+                                                case 1:
+                                                    chosenPatient = p1Name;
+                                                    break;
+                                                case 2:
+                                                    chosenPatient = p2Name;
+                                                    break;
+                                                case 3:
+                                                    chosenPatient = p3Name;
+                                                    break;
+                                            }
+                                        }
+
+                                        int doctorCounter = 0;
+                                        if (p1Active) { doctorCounter++; Console.WriteLine(doctorCounter + ". " + p1Name); }
+                                        if (p2Active) { doctorCounter++; Console.WriteLine(doctorCounter + ". " + p2Name); }
+                                        if (p3Active) { doctorCounter++; Console.WriteLine(doctorCounter + ". " + p2Name); }
+
+                                        int chooseDoctor = 0;
+                                        string chosenDoctor = "";
+                                        Console.Write("Choose Doctor number: ");
+                                        chooseDoctor = Convert.ToInt32(Console.ReadLine());
+                                        if (chooseDoctor > doctorCounter)
+                                        {
+                                            Console.WriteLine("Doctor number " + chooseDoctor + " is not found");
+                                            break;
+                                        }
+                                        else
+                                        {
+                                            switch (chooseDoctor)
+                                            {
+                                                case 1:
+                                                    chosenDoctor = d1Name;
+                                                    break;
+                                                case 2:
+                                                    chosenDoctor = d2Name;
+                                                    break;
+                                            }
+                                        }
+
+                                        Console.Write("Enter Appointment date (format: DD/MM/YYYY): ");
+                                        string date = Console.ReadLine();
+
+                                        if (!a1Active && a1Patient == chosenPatient && a1Doctor == chosenDoctor)
+                                        {
+                                            Console.WriteLine("Duplicate appointment."); break;
+                                        } 
+                                        else if (!a2Active && a2Patient == chosenPatient && a2Doctor == chosenDoctor)
+                                        {
+                                            Console.WriteLine("Duplicate appointment."); break;
+                                        }
+                                        else if (!a3Active && a3Patient == chosenPatient && a3Doctor == chosenDoctor)
+                                        {
+                                            Console.WriteLine("Duplicate appointment."); break;
+                                        }
+
+                                        if (!a1Active)
+                                        {
+                                            a1Date = date; a1Patient = chosenPatient; a1Doctor = chosenDoctor; a1Status = "Scheduled"; a1Active = true;
+                                        }
+                                        else if (!a1Active)
+                                        {
+                                            a2Date = date; a2Patient = chosenPatient; a2Doctor = chosenDoctor; a2Status = "Scheduled"; a2Active = true;
+                                        }
+                                        else if (!a1Active)
+                                        {
+                                            a3Date = date; a3Patient = chosenPatient; a3Doctor = chosenDoctor; a3Status = "Scheduled"; a3Active = true;
+                                        }
+
+                                        appointmentCount++;
+                                    }
+                                    break;
                                 case 0:
                                     appointmentOption = 0;
                                     break;

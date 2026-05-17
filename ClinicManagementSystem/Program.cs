@@ -288,10 +288,16 @@
                                     if (appointmentCount == MAX_APPOINTMENTS)
                                     {
                                         Console.WriteLine("No available appointment slots.");
+                                        Console.WriteLine("Press any key to continue");
+                                        Console.ReadKey();
+                                        Console.Clear();
                                     }
                                     else if (patientCount == 0 || doctorCount == 0)
                                     {
                                         Console.WriteLine("Please add patients and doctors first.");
+                                        Console.WriteLine("Press any key to continue");
+                                        Console.ReadKey();
+                                        Console.Clear();
                                     }
                                     else
                                     {

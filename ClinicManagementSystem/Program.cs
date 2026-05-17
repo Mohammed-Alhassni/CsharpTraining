@@ -308,13 +308,23 @@
                                         switch (choosePatient)
                                         {
                                             case 1:
-                                                chosenPatient = p1Name;
+                                                if (p1Active)
+                                                {
+                                                    chosenPatient = p1Name;
+                                                }
                                                 break;
                                             case 2:
-                                                chosenPatient = p2Name;
+                                                if (p2Active)
+                                                {
+                                                    chosenPatient = p2Name;
+                                                }
                                                 break;
                                             case 3:
-                                                chosenPatient = p3Name;
+                                                if (p3Active)
+                                                {
+                                                    chosenPatient = p3Name;
+                                                }
+
                                                 break;
                                             default:
                                                 Console.WriteLine("Patient number " + choosePatient + " is not found");
@@ -333,10 +343,19 @@
                                         switch (chooseDoctor)
                                         {
                                             case 1:
-                                                chosenDoctor = d1Name;
+                                                if (d1Active)
+                                                {
+                                                    chosenDoctor = d1Name;
+                                                }
+
+                                                ;
                                                 break;
                                             case 2:
                                                 chosenDoctor = d2Name;
+                                                if (d2Active)
+                                                {
+                                                    chosenDoctor = d2Name;
+                                                }
                                                 break;
                                             default:
                                                 Console.WriteLine("Doctor number " + chooseDoctor + " is not found");

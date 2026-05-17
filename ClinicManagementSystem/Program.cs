@@ -411,6 +411,74 @@
                                     Console.ReadKey();
                                     Console.Clear();
                                     break;
+                                case 3:
+                                    int appointmentCounter = 0;
+                                    if (a1Active) { appointmentCounter++; Console.WriteLine(appointmentCounter + $". Patient: {a1Patient}, Doctor: {a1Doctor}, Date: {a1Date}, Status: {a1Status}"); }
+                                    if (a2Active) { appointmentCounter++; Console.WriteLine(appointmentCounter + $". Patient: {a2Patient}, Doctor: {a2Doctor}, Date: {a2Date}, Status: {a2Status}"); }
+                                    if (a3Active) { appointmentCounter++; Console.WriteLine(appointmentCounter + $". Patient: {a3Patient}, Doctor: {a3Doctor}, Date: {a3Date}, Status: {a3Status}"); }
+
+                                    int chooseAppointment = 0;
+                                    Console.Write("Choose appointment number: ");
+                                    chooseAppointment = Convert.ToInt32(Console.ReadLine());
+
+                                    if (chooseAppointment > appointmentCounter)
+                                    {
+                                        Console.WriteLine("Appointment number " + chooseAppointment + " is not found");
+                                        chooseAppointment = -1;
+                                    }
+                                    
+                                    Console.WriteLine("Status options:  1. Scheduled 2. Completed 3. Cancelled");
+                                    Console.Write("Select status option: ");
+                                    int statusOption = Convert.ToInt32(Console.ReadLine());
+                                    string statusSelected = "";
+                                    bool breakFlag = false;
+                                    
+                                    switch (statusOption)
+                                    {
+                                        case 1:
+                                            statusSelected = "Scheduled";
+                                            break;
+                                        case 2:
+                                            statusSelected = "Completed";
+                                            break;
+                                        case 3:
+                                            statusSelected = "Cancelled";
+                                            break;
+                                        default:
+                                            Console.Write("Invalid choice.");
+                                            breakFlag = true;
+                                            break;
+                                    }
+
+                                    if (breakFlag)
+                                    {
+                                        break;
+                                    }
+
+                                    switch (chooseAppointment)
+                                    {
+                                        case 1:
+                                            a1Status = statusSelected;
+                                            Console.WriteLine("Status Updated to: " + statusSelected);
+                                            break;
+                                        case 2:
+                                            a2Status = statusSelected;
+                                            Console.WriteLine("Status Updated to: " + statusSelected);
+                                            break;
+                                        case 3:
+                                            a3Status = statusSelected;
+                                            Console.WriteLine("Status Updated to: " + statusSelected);
+                                            break;
+                                        default:
+                                            Console.WriteLine("Appointment number " + chooseAppointment + " is not found");
+                                            break;
+                                    }
+                                    
+                                    
+                                    Console.WriteLine("Press any key to continue");
+                                    Console.ReadKey();
+                                    Console.Clear();
+                                    break;
                                 case 0:
                                     appointmentOption = 0;
                                     Console.Clear();

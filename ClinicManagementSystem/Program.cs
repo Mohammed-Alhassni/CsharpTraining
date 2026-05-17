@@ -355,6 +355,13 @@
                                         appointmentCount++;
                                     }
                                     break;
+                                case 2:
+                                    int counter = 0;
+                                    if (counter == 0) { Console.WriteLine("No appointments registered."); }
+                                    if (a1Active) { counter++; Console.WriteLine($"Appointment #{counter} Patient: {a1Patient}, Doctor: {a1Doctor}, Date: {a1Date}, Status: {a1Status}"); }
+                                    if (a2Active) { counter++; Console.WriteLine($"Appointment #{counter} Patient: {a2Patient}, Doctor: {a2Doctor}, Date: {a2Date}, Status: {a2Status}"); }
+                                    if (a3Active) { counter++; Console.WriteLine($"Appointment #{counter} Patient: {a3Patient}, Doctor: {a3Doctor}, Date: {a3Date}, Status: {a3Status}"); }
+                                    break;
                                 case 0:
                                     appointmentOption = 0;
                                     break;

@@ -353,11 +353,8 @@
                                                 {
                                                     chosenDoctor = d1Name;
                                                 }
-
-                                                ;
                                                 break;
                                             case 2:
-                                                chosenDoctor = d2Name;
                                                 if (d2Active)
                                                 {
                                                     chosenDoctor = d2Name;

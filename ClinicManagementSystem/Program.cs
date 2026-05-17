@@ -129,9 +129,9 @@
                                 case 3:
                                     string targetPatient;
                                     Console.Write("Enter Target Patient Name: "); targetPatient = Console.ReadLine();
-                                    if (p1Active && p1Name == targetPatient) { Console.Write("Enter new phone: "); p1Phone = Console.ReadLine(); Console.Write($"{targetPatient} phone updated."); }
-                                    else if (p2Active && p2Name == targetPatient) { Console.Write("Enter new phone: "); p2Phone = Console.ReadLine(); Console.Write($"{targetPatient} phone updated."); }
-                                    else if (p3Active && p3Name == targetPatient) { Console.Write("Enter new phone: "); p3Phone = Console.ReadLine(); Console.Write($"{targetPatient} phone updated."); }
+                                    if (p1Active && p1Name == targetPatient) { Console.Write("Enter new phone: "); p1Phone = Console.ReadLine(); Console.WriteLine($"{targetPatient} phone updated."); }
+                                    else if (p2Active && p2Name == targetPatient) { Console.Write("Enter new phone: "); p2Phone = Console.ReadLine(); Console.WriteLine($"{targetPatient} phone updated."); }
+                                    else if (p3Active && p3Name == targetPatient) { Console.Write("Enter new phone: "); p3Phone = Console.ReadLine(); Console.WriteLine($"{targetPatient} phone updated."); }
                                     else { Console.WriteLine("This Patient Does not exist "); }
                                     Console.WriteLine("Press any key to continue");
                                     Console.ReadKey();
@@ -140,9 +140,9 @@
                                 case 4:
                                     string targetDeletePatient;
                                     Console.Write("Enter Target Patient Name: "); targetDeletePatient = Console.ReadLine();
-                                    if (p1Active && p1Name == targetDeletePatient) { p1Name = ""; p1Age = 0; p1Phone = ""; p1Active = false; patientCount--; Console.Write($"{targetDeletePatient} have been deleted."); }
-                                    else if (p2Active && p2Name == targetDeletePatient) { p2Name = ""; p2Age = 0; p2Phone = ""; p2Active = false; patientCount--;Console.Write($"{targetDeletePatient} have been deleted."); }
-                                    else if (p3Active && p3Name == targetDeletePatient) { p2Name = ""; p2Age = 0; p2Phone = ""; p2Active = false; patientCount--;Console.Write($"{targetDeletePatient} have been deleted."); }
+                                    if (p1Active && p1Name == targetDeletePatient) { p1Name = ""; p1Age = 0; p1Phone = ""; p1Active = false; patientCount--; Console.WriteLine($"{targetDeletePatient} have been deleted."); }
+                                    else if (p2Active && p2Name == targetDeletePatient) { p2Name = ""; p2Age = 0; p2Phone = ""; p2Active = false; patientCount--;Console.WriteLine($"{targetDeletePatient} have been deleted."); }
+                                    else if (p3Active && p3Name == targetDeletePatient) { p2Name = ""; p2Age = 0; p2Phone = ""; p2Active = false; patientCount--;Console.WriteLine($"{targetDeletePatient} have been deleted."); }
                                     else { Console.WriteLine("This Patient Does not exist "); }
                                     Console.WriteLine("Press any key to continue");
                                     Console.ReadKey();
@@ -228,8 +228,8 @@
                                 case 3:
                                     string targetDoctor;
                                     Console.Write("Enter Target Doctor Name: "); targetDoctor = Console.ReadLine();
-                                    if (d1Active && d1Name == targetDoctor) { Console.Write("Enter new fee: "); d1Fee = double.Parse(Console.ReadLine()); Console.Write($"{targetDoctor} fee updated."); }
-                                    else if (d2Active && d2Name == targetDoctor) { Console.Write("Enter new fee: "); d2Fee = double.Parse(Console.ReadLine()); Console.Write($"{targetDoctor} fee updated."); }
+                                    if (d1Active && d1Name == targetDoctor) { Console.Write("Enter new fee: "); d1Fee = double.Parse(Console.ReadLine()); Console.WriteLine($"{targetDoctor} fee updated."); }
+                                    else if (d2Active && d2Name == targetDoctor) { Console.Write("Enter new fee: "); d2Fee = double.Parse(Console.ReadLine()); Console.WriteLine($"{targetDoctor} fee updated."); }
                                     else { Console.WriteLine("This Doctor Does not exist "); }
                                     Console.WriteLine("Press any key to continue");
                                     Console.ReadKey();
@@ -238,8 +238,8 @@
                                 case 4:
                                     string targetDeleteDoctor;
                                     Console.Write("Enter Target Doctor Name: "); targetDeleteDoctor = Console.ReadLine();
-                                    if (d1Active && d1Name == targetDeleteDoctor) { d1Name = ""; d1Fee = 0; d1Spec = ""; d1Active = false; doctorCount--; Console.Write($"{targetDeleteDoctor} have been deleted."); }
-                                    else if (d2Active && d2Name == targetDeleteDoctor) { d2Name = ""; d2Fee = 0; d2Spec = ""; d2Active = false; doctorCount--; Console.Write($"{targetDeleteDoctor} have been deleted."); }
+                                    if (d1Active && d1Name == targetDeleteDoctor) { d1Name = ""; d1Fee = 0; d1Spec = ""; d1Active = false; doctorCount--; Console.WriteLine($"{targetDeleteDoctor} have been deleted."); }
+                                    else if (d2Active && d2Name == targetDeleteDoctor) { d2Name = ""; d2Fee = 0; d2Spec = ""; d2Active = false; doctorCount--; Console.WriteLine($"{targetDeleteDoctor} have been deleted."); }
                                     else { Console.WriteLine("This Doctor Does not exist "); }
                                     Console.WriteLine("Press any key to continue");
                                     Console.ReadKey();

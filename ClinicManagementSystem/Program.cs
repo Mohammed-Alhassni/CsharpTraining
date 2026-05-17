@@ -114,6 +114,7 @@
 
                                         patientCount++;
                                     }
+                                    Console.Clear();
                                     break;
                                 case 2:
                                     int counter = 0;
@@ -121,6 +122,9 @@
                                     if (p1Active) { counter++; Console.WriteLine($"Patient #{counter} Name: {p1Name}, Age: {p1Age}, Phone: {p1Phone}"); }
                                     if (p2Active) { counter++; Console.WriteLine($"Patient #{counter} Name: {p2Name}, Age: {p2Age}, Phone: {p2Phone}"); }
                                     if (p3Active) { counter++; Console.WriteLine($"Patient #{counter} Name: {p3Name}, Age: {p3Age}, Phone: {p3Phone}"); }
+                                    Console.WriteLine("Press any key to continue");
+                                    Console.ReadKey();
+                                    Console.Clear();
                                     break;
                                 case 3:
                                     string targetPatient;
@@ -129,6 +133,9 @@
                                     else if (p2Active && p2Name == targetPatient) { Console.Write("Enter new phone: "); p2Phone = Console.ReadLine(); Console.Write($"{targetPatient} phone updated."); }
                                     else if (p3Active && p3Name == targetPatient) { Console.Write("Enter new phone: "); p3Phone = Console.ReadLine(); Console.Write($"{targetPatient} phone updated."); }
                                     else { Console.WriteLine("This Patient Does not exist "); }
+                                    Console.WriteLine("Press any key to continue");
+                                    Console.ReadKey();
+                                    Console.Clear();
                                     break;
                                 case 4:
                                     string targetDeletePatient;
@@ -137,12 +144,18 @@
                                     else if (p2Active && p2Name == targetDeletePatient) { p2Name = ""; p2Age = 0; p2Phone = ""; p2Active = false; patientCount--;Console.Write($"{targetDeletePatient} have been deleted."); }
                                     else if (p3Active && p3Name == targetDeletePatient) { p2Name = ""; p2Age = 0; p2Phone = ""; p2Active = false; patientCount--;Console.Write($"{targetDeletePatient} have been deleted."); }
                                     else { Console.WriteLine("This Patient Does not exist "); }
+                                    Console.WriteLine("Press any key to continue");
+                                    Console.ReadKey();
+                                    Console.Clear();
                                     break;
                                 case 0:
                                     patientOption = 0;
                                     break;
                                 default:
                                     Console.WriteLine("do NOT exit the program");
+                                    Console.WriteLine("Press any key to continue");
+                                    Console.ReadKey();
+                                    Console.Clear();
                                     break;
                             }
                         }
@@ -200,12 +213,17 @@
 
                                         doctorCount++;
                                     }
+
+                                    Console.Clear();
                                     break;
                                 case 2:
                                     int counter = 0;
                                     if (counter == 0) { Console.WriteLine("No doctors registered."); }
                                     if (d1Active) { counter++; Console.WriteLine($"Doctor #{counter} Name: {d1Name}, Specialization: {d1Spec}, Fee: {d1Fee}"); }
                                     if (d2Active) { counter++; Console.WriteLine($"Doctor #{counter} Name: {d2Name}, Specialization: {d2Spec}, Fee: {d2Fee}"); }
+                                    Console.WriteLine("Press any key to continue");
+                                    Console.ReadKey();
+                                    Console.Clear();
                                     break;
                                 case 3:
                                     string targetDoctor;
@@ -213,6 +231,9 @@
                                     if (d1Active && d1Name == targetDoctor) { Console.Write("Enter new fee: "); d1Fee = double.Parse(Console.ReadLine()); Console.Write($"{targetDoctor} fee updated."); }
                                     else if (d2Active && d2Name == targetDoctor) { Console.Write("Enter new fee: "); d2Fee = double.Parse(Console.ReadLine()); Console.Write($"{targetDoctor} fee updated."); }
                                     else { Console.WriteLine("This Doctor Does not exist "); }
+                                    Console.WriteLine("Press any key to continue");
+                                    Console.ReadKey();
+                                    Console.Clear();
                                     break;
                                 case 4:
                                     string targetDeleteDoctor;
@@ -220,12 +241,18 @@
                                     if (d1Active && d1Name == targetDeleteDoctor) { d1Name = ""; d1Fee = 0; d1Spec = ""; d1Active = false; doctorCount--; Console.Write($"{targetDeleteDoctor} have been deleted."); }
                                     else if (d2Active && d2Name == targetDeleteDoctor) { d2Name = ""; d2Fee = 0; d2Spec = ""; d2Active = false; doctorCount--; Console.Write($"{targetDeleteDoctor} have been deleted."); }
                                     else { Console.WriteLine("This Doctor Does not exist "); }
+                                    Console.WriteLine("Press any key to continue");
+                                    Console.ReadKey();
+                                    Console.Clear();
                                     break;
                                 case 0:
                                     docotrOption = 0;
                                     break;
                                 default:
                                     Console.WriteLine("do NOT exit the program");
+                                    Console.WriteLine("Press any key to continue");
+                                    Console.ReadKey();
+                                    Console.Clear();
                                     break;
                             }
                         }
@@ -354,6 +381,7 @@
 
                                         appointmentCount++;
                                     }
+                                    Console.Clear();
                                     break;
                                 case 2:
                                     int counter = 0;
@@ -361,12 +389,18 @@
                                     if (a1Active) { counter++; Console.WriteLine($"Appointment #{counter} Patient: {a1Patient}, Doctor: {a1Doctor}, Date: {a1Date}, Status: {a1Status}"); }
                                     if (a2Active) { counter++; Console.WriteLine($"Appointment #{counter} Patient: {a2Patient}, Doctor: {a2Doctor}, Date: {a2Date}, Status: {a2Status}"); }
                                     if (a3Active) { counter++; Console.WriteLine($"Appointment #{counter} Patient: {a3Patient}, Doctor: {a3Doctor}, Date: {a3Date}, Status: {a3Status}"); }
+                                    Console.WriteLine("Press any key to continue");
+                                    Console.ReadKey();
+                                    Console.Clear();
                                     break;
                                 case 0:
                                     appointmentOption = 0;
                                     break;
                                 default:
                                     Console.WriteLine("do NOT exit the program");
+                                    Console.WriteLine("Press any key to continue");
+                                    Console.ReadKey();
+                                    Console.Clear();
                                     break;
                             }
                         }

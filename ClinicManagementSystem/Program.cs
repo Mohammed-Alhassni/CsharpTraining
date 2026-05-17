@@ -150,6 +150,7 @@
                                     break;
                                 case 0:
                                     patientOption = 0;
+                                    Console.Clear();
                                     break;
                                 default:
                                     Console.WriteLine("do NOT exit the program");
@@ -247,6 +248,7 @@
                                     break;
                                 case 0:
                                     docotrOption = 0;
+                                    Console.Clear();
                                     break;
                                 default:
                                     Console.WriteLine("do NOT exit the program");
@@ -395,6 +397,7 @@
                                     break;
                                 case 0:
                                     appointmentOption = 0;
+                                    Console.Clear();
                                     break;
                                 default:
                                     Console.WriteLine("do NOT exit the program");
